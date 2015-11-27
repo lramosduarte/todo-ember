@@ -1,0 +1,26 @@
+<section id="main">  
+    {{yield}}
+
+    <input type="checkbox" id="toggle-all">
+</section>
+
+<footer id="footer">  
+    <span id="todo-count">
+        <strong>2</strong> sem concluir
+    </span>
+    <ul id="filters">
+        <li>
+            <a href="all" class="selected">Todos</a>
+        </li>
+        <li>
+            <a href="active">Ativos</a>
+        </li>
+        <li>
+            <a href="completed">Concluidos</a>
+        </li>
+    </ul>
+
+    <button id="clear-completed">
+        Limpar Concluídos (1)
+    </button>
+</footer>  

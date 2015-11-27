@@ -2,6 +2,17 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+    'default-src': "*",
+    'script-src': "*",
+    'font-src': "*",
+    'connect-src': "*",
+    'img-src': "*",
+    'style-src': "*",
+    'media-src': "*",
+    'frame-src': "*",
+    'object-src': "*"
+    },
     modulePrefix: 'new-ember-todo',
     environment: environment,
     baseURL: '/',
