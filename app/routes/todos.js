@@ -21,6 +21,12 @@ export default Ember.Route.extend({
                descricao: novoItem,
                concluido: false
            }).save();
+        },
+        updateTodo(todo){
+            todo.save();
+        },
+        deleteTodo(todo){
+            todo.destroyRecord();
         }
     }
 });

@@ -10,13 +10,19 @@
     </span>
     <ul id="filters">
         <li>
-            <a href="all" class="selected">Todos</a>
+        	{{#link-to "todos.index" activeClass="selected"}}
+        		Todos
+        	{{/link-to}}
         </li>
         <li>
-            <a href="active">Ativos</a>
+        	{{#link-to "todos.ativos" ativeClass="selected"}}
+        		Ativos
+        	{{/link-to}}
         </li>
         <li>
-            <a href="completed">Concluidos</a>
+	        {{#link-to "todos.concluidos" ativeClass="selected"}}
+	        	Concluidos
+	        {{/link-to}}
         </li>
     </ul>
 
