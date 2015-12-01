@@ -1,12 +1,12 @@
 <section id="main">  
     {{yield}}
 
-    <input type="checkbox" id="toggle-all">
+    {{input type="checkbox" id="toggle-all" checked=allAreDone }}
 </section>
 
 <footer id="footer">  
     <span id="todo-count">
-        <strong>2</strong> sem concluir
+        <strong>{{remaining}}</strong> {{inflection}} 
     </span>
     <ul id="filters">
         <li>
@@ -26,7 +26,11 @@
         </li>
     </ul>
 
-    <button id="clear-completed">
-        Limpar Concluídos (1)
-    </button>
+    
+        {{#if hasCompleted}}
+            <button id="clear-completed" {{action "clearCompleted"}}>
+                Limpar concluidos ({{completed}})
+            </button>
+        {{/if}}
+    
 </footer>  
