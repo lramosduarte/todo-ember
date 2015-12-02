@@ -7,6 +7,6 @@ export default Ember.Component.extend({
                 this.sendAction('action', novoTitulo);
             }
             this.set('novoTitulo', '');
-        }
+        },
     }
 });

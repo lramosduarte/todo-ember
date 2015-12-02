@@ -6,10 +6,13 @@ export default Ember.Route.extend({
     },
     actions: {
         createTodo(novoTitulo) {
-            this.store.createRecord('todo', {
+            let coment = this.store.peekRecord('comentario',1);
+            let todo = this.store.createRecord('todo', {
                 descricao: novoTitulo,
-                concluido: false
-            }).save();
+                concluido: false,
+            });
+            coment.get('comentario').pushObject(todo);
+            todo.save();
         },
        updateTodo(todo) {
            todo.save();
@@ -18,4 +21,5 @@ export default Ember.Route.extend({
            todo.destroyRecord();
        }
     }
+
 });

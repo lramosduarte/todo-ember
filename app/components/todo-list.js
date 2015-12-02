@@ -12,14 +12,14 @@ export default Ember.Component.extend({
     hasCompleted: Ember.computed('completed', function(){
         return this.get('completed') > 0;
     }),
-    didInsertElement() {
+    /*didInsertElement() {DEPRECATE
         let todos = this.get('todos');
         if (todos.get('length') > 0 && todos.isEvery('concluido', true)) {
             this.set('allAreDone', true);
         } else {
             this.set('allAreDone', false);
         }
-    },
+    },*/
 	allAreDoneObserver: Ember.observer('allAreDone', function(){
         let concluidoValue = this.get('allAreDone');
         let todos = this.get('todos');
