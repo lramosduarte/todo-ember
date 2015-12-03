@@ -1,0 +1,8 @@
+<ul id="todo-list" >
+	{{#each model as |comentario|}}
+		<li>{{comentario.comentarios}}</li>
+	{{else}}
+		<li>Nenhum comentario</li>
+	{{/each}}
+</ul>
+{{outlet}}

@@ -10,7 +10,7 @@ Router.map(function() {
     this.route('concluidos');
     this.route('ativos');
   });
-  this.route('comentario');
+  this.route('comentarios');
 });
 
 export default Router;

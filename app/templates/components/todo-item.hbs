@@ -3,7 +3,7 @@
 {{else}}
     {{input type="checkbox" checked=todo.concluido  class="toggle"}}
 	<label class="{{if todo.concluido 'completed'}}"
-	{{action "editTodo" on="doubleClick"}}>{{todo.descricao}}
-	</label>
-	<button class="destroy" {{action "deleteTodo"}}></button>  
+	{{action "editTodo" on="doubleClick"}}>{{todo.descricao}}	</label>
+	<button class="comments"> Comentários</button>
+	<button class="destroy" {{action "deleteTodo"}}>Deletar</button>  
 {{/if}}
