@@ -1,8 +1,8 @@
+<h2>{{name}}</h2>
+
 <ul id="todo-list" >
-	{{#each model as |comentario|}}
-		<li>{{comentario.comentarios}}</li>
-	{{else}}
-		<li>Nenhum comentario</li>
+	{{#each model as |coment|}}
+		<li>{{coment.comentarios}}</li>
 	{{/each}}
 </ul>
 {{#link-to "todos" ativeClass="selected"}}
