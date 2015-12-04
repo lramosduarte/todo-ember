@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model(){
-		return this.store.findAll('comentario');
+	model(params){
+		//return this.store.find('comentario',params.tarefas_id);
+		//return this.store.findAll('comentario');
 	}
 });

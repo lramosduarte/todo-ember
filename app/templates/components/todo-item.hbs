@@ -4,6 +4,6 @@
     {{input type="checkbox" checked=todo.concluido  class="toggle"}}
 	<label class="{{if todo.concluido 'completed'}}"
 	{{action "editTodo" on="doubleClick"}}>{{todo.descricao}}	</label>
-	<button class="comments"> Comentários</button>
+	{{#link-to 'todos.comentarios' todo.id}}...{{/link-to}}
 	<button class="destroy" {{action "deleteTodo"}}>Deletar</button>  
 {{/if}}
